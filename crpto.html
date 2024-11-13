@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FxPro</title>
+  <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+  <script src="bootstrap/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <script src="jquery/jquer.min.js"></script>
+
+  <style>
+    .responsive-background {
+      background-image: url("images/images\ \(17\).jpeg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 1000%;
+    }
+
+    .navbar-brand {
+      color: #600aca !important;
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    .navbar-nav {
+      display: flex;
+      color: white;
+      list-style-type: none;
+      text-decoration: none;
+    }
+
+    .nav-item {
+      color: white;
+      margin: 3px;
+      margin-left: 70px;
+      list-style-type: none;
+      text-decoration: none;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      color: white;
+      list-style-type: none;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background-color: #600aca !important;
+      border: none;
+      height: 40px;
+      width: 100%;
+
+    }
+
+    .text {
+      color: #600aca !important;
+    }
+
+    .text2 {
+      color: rgba(255, 255, 255, 0.695) !important;
+    }
+
+    .text3 {
+      color: white;
+      text-align: center;
+      margin-top: 10px;
+      font-size: 250%;
+      font-weight: bold;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .text4 {
+      color: rgba(255, 255, 255, 0.695) !important;
+      text-align: center;
+      font-size: 140%;
+    }
+
+    .text5 {
+      color: white;
+      text-align: center;
+      margin-top: 10%;
+      font-size: 50px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .display {
+      color: white;
+      font-size: 350%;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .display_2 {
+      color: white;
+      font-size: 310%;
+    }
+
+    .display_3 {
+      color: cornflowerblue;
+    }
+
+    .button {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      background-color: #600aca;
+      border: none;
+      border-radius: 2px;
+      color: white;
+      cursor: pointer;
+
+    }
+
+    .btn_2 {
+      background-color: transparent;
+      color: white;
+      border: 2px solid #3f2263;
+      border-radius: 2px;
+      width: 150px;
+      height: 40px;
+    }
+
+    .btn_5 {
+      background-color: #600aca;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      width: 150px;
+      height: 40px;
+    }
+
+    .btn_6 {
+      color: #fff;
+      background-color: #600aca;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 150px;
+      height: 40px;
+    }
+
+    /* .btn_7{
+      color: #fff;
+      background-color: #600aca;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 160px;
+      height: 50px;
+      margin-left: 36%;
+     
+    } */
+
+    .card {
+      background-color: rgba(245, 245, 245, 0.151);
+      height: 100%;
+      margin: 10px;
+
+    }
+
+    .card_1 {
+
+      background-color: rgba(127, 115, 115, 0.291);
+      height: 90%;
+      margin: 10px;
+      border-radius: 5px;
+      box-shadow: #600aca;
+
+
+    }
+
+    .h3 {
+      color: white;
+      text-align: center;
+      margin-top: 10%;
+    }
+
+    .card-text {
+      color: rgba(255, 255, 255, 0.695) !important;
+      text-align: center;
+      margin-top: 10%;
+
+    }
+
+    .get-started {
+      text-align: center;
+      color: #7c52b0;
+    }
+
+    .img {
+      width: 20%;
+      height: 20%;
+      position: absolute;
+      margin-left: 100px;
+      margin-top: -15%;
+    }
+
+    .img_1 {
+      width: 25%;
+      height: 25%;
+      position: absolute;
+      margin-left: 98px;
+      margin-top: -15%;
+    }
+
+    .img_2 {
+      width: 20%;
+      height: 20%;
+      position: absolute;
+      margin-left: 100px;
+      margin-top: -15%;
+    }
+
+    .featured-nfts {
+      padding: 50px;
+      color: #fff;
+
+    }
+
+    .nft-list {
+      display: flex;
+      gap: 20px;
+    }
+
+    /* .nft-card {
+      background-color: rgba(245, 245, 245, 0.151);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      width: 250px;
+     
+      margin: 10px;
+    } */
+
+    .nft-card img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+
+    .nft_text_1 {
+      color: #fff;
+    }
+
+    .nft_text_2 {
+      color: #fff;
+    }
+
+    .email_input {
+      width: 60%;
+      height: 50px;
+      border-radius: 2px;
+      border: none;
+
+
+
+    }
+
+    .email_button {
+      width: 35%;
+      height: 50px;
+      background-color: #600aca;
+      border: none;
+      color: #fff;
+      border-radius: 2px;
+    }
+
+    .mail_input {
+      width: 70%;
+      height: 50px;
+      border-radius: 5px;
+      border: none;
+
+
+
+    }
+
+    .mail_button {
+      width: 30%;
+      height: 50px;
+      background-color: #600aca;
+      color: #fff;
+      border-radius: 5px;
+      border: none;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!--section1-->
+  <div class="container-fluid ">
+    <div class="responsive-background">
+      <header>
+
+        <nav class="navbar navbar-expand-lg ">
+          <div class="container">
+            <a class="navbar-brand " href="#">NFT Market</a>
+            <button class="navbar-toggler"
+              style="border: 2px solid #3f2263; background-color: aliceblue;  border-color: #3f2263;" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ">
+                <li class="nav-item">
+                  <a class="nav-link active " style="color: white;" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="#">NFT Market</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="#">Product</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link btn btn-primary text-white" href="#">Explore Now</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+
+
+
+        <!--section2-->
+        <section>
+          <div class="container pt-5">
+            <div class="row">
+              <div class="col-12 col-lg-6">
+                <h1 class="display">Explore The Largest <span class="text">NFT</span><span class=""> Market place</span>
+                </h1>
+                <p class="text2">Buy, Sell & Trade Cryptocurrency Easily and Securely</p>
+                <div class="button">
+                  <button class="btn">
+                    Connect Wallet
+                  </button>
+                  <button class="btn_2">Learn More</button>
+                </div>
+                <div class="double_image">
+                  <img src="images/ei_1731075486177-removebg-preview.png" alt="">
+
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <img src="images/1000145449_prev_ui.png" class="img-fluid" style="height:100%; width: 500px;">
+              </div>
+            </div>
+          </div>
+        </section>
+      </header>
+
+
+      <!--section3-->
+      <section class="container">
+        <div class="row ">
+          <div class="col 12">
+            <h1 class="text3">Secure & Private</h1>
+            <p class="text4">24/7 Dedicated Support Team</p>
+          </div>
+
+          <div class="row  mt-2 g-4">
+            <div class="col-12 col-lg-4">
+              <div class="card p-3 ">
+                <!-- <img src="images/ei_1731063819974-removebg-preview.png" class="img"> -->
+
+                <h3 class="h3">Invest In Crypto</h3>
+                <p class="card-text">
+                  Invest in crypto anytime, anywhere with our safr, secure and easy to use oline platform.
+                </p>
+                <h6 class="get-started">Get Started</h6>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="card p-3">
+                <!-- <img src="images/ei_1731063849030-removebg-preview.png" class="img_1"> -->
+
+
+                <h3 class="h3">Fast Transaction</h3>
+                <p class="card-text">
+                  Invest in cryptocurrency with our secure and easy-to-use online platform. With 24/7 access to full
+                  service customer support, you can trade with confidence
+                </p>
+                <h6 class="get-started">Get Started</h6>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="card p-3 ">
+                <!-- <img src="images/ei_1731063647471-removebg-preview.png" class="img_2"> -->
+
+
+                <h3 class="h3">Secure</h3>
+                <p class="card-text">
+                  Gain access to a variety of digital assets with just a few clicks. Our intutive platform makes it easy
+                  to buy, sel, and store your cryptocurrency.
+                </p>
+                <h6 class="get-started">Get Started</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!--section4-->
+      <section>
+        <div class="container pt-5" style="margin-top: 5%;">
+          <div class="row">
+            <div class="col-12 col-lg-6">
+              <h1 class="display_2">Trade with confidence with <span class="text">Our platform</span><span>and easy to
+                  use.</span></h1>
+              <p class="text2">Stay up-to-date with the latest news and trends in the crypto space. Follow our market
+                insights to make informed decisions.</p>
+              <div class="button">
+
+                <button class="btn">
+                  Explore Now
+                </button>
+              </div>
+
+            </div>
+            <div class="col-12 col-lg-6">
+              <img src="images/1000145450_prev_ui.png" class="img-fluid" style="height:100%; width: 500px;">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--section5-->
+      <section class="container featured-nfts">
+        <div class="row ">
+          <div class="col 12">
+            <h1 class="text3">Trending NFTs</h1>
+            <p class="text4">24/7 Dedicated Support Team</p>
+          </div>
+
+          <div class="row  mt-2 g-4">
+            <div class="col-12 col-lg-3">
+              <div class="card  p-3">
+
+                <img src="images/IMG_0333.JPG" alt="NFT Image">
+                <h3 class="nft_text_1">NFT name 1</h3>
+                <p class="nft_text_2">Price: 0.5 ETH</p>
+              </div>
+            </div>
+            <div class="col-12 col-lg-3">
+              <div class="card  p-3">
+
+                <img src="images/645d85225e0bb393a29e0833a22e09d6.png" alt="NFT Image">
+                <h3 class="nft_text_1">Pirate Nation</h3>
+                <p class="nft_text_2">Price: 1.2 ETH</p>
+              </div>
+            </div>
+            <div class="col-12 col-lg-3">
+              <div class="card p-3">
+
+                <img src="images/35762a8f732d469f1c6cab790781fd10.png" alt="NFT Image">
+                <h3 class="nft_text_1">Wool Pouch</h3>
+                <p class="nft_text_2">Price: 2.5 ETH</p>
+              </div>
+            </div>
+            <div class="col-12 col-lg-3">
+              <div class="card  p-3">
+
+                <img src="images/images.jpeg" alt="NFT Image">
+                <h3 class="nft_text_1">NFT name 4</h3>
+                <p class="nft_text_2">Price: 1.5 ETH</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!--section6-->
+      <section>
+        <div class="container pt-5">
+          <div class="row">
+            <div class="col-12 col-lg-6">
+              <h6 class="display_3">UNSTOPPABLE NFTS</h6>
+              <h1 class="display">Launch your truly own<span class="text">NFT</span><span class=""> collection.
+                  <br>Easily.</span>
+              </h1>
+              <p class="text2">Deploy an NFT collection with just a few clicks and retain the ownership of your files.
+                Your NFT data is safely stored on multiple IPFS nodes and with up to 50 replicas globally. </p>
+              <div class="button">
+                <div class="email_form_container">
+                  <form action="#" class="input">
+                    <input type="email" class="email_input mb-5" required="required" placeholder="Your e-mail"><button
+                      type="submit" class="email_button">Join now</button>
+                  </form>
+                </div>
+
+              </div>
+
+            </div>
+            <div class="col-12 col-lg-6">
+              <h6 class="display_3">MULTI-CHAIN ENVIRONMENT</h6>
+              <h1 class="display">Mint on your network of choice.
+              </h1>
+              <p class="text2">Deploy an NFT collection with just a few clicks and retain the ownership of your files.
+                Your NFT data is safely stored on multiple IPFS nodes and with up to 50 replicas globally. </p>
+              <button class="btn_5">
+                Learn more
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--section7-->
+      <section class="container">
+        <div class="row ">
+          <div class="col 12">
+            <h1 class="text3">Launch your truly own NFTs by tomorrow</h1>
+            <p class="text4">Start your NFT journey in a few clicks. The rest will be history.</p>
+          </div>
+
+          <div class="row  mt-2 g-4">
+            <div class="col-12 col-lg-4">
+              <div class="card_1 p-3 ">
+
+
+                <h3 class="text5">Sign up</h3>
+                <p class="card-text">
+                  Create your account on NFT platform
+                </p>
+                <h6 class="get-started">Get Started</h6>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="card_1 p-3">
+
+
+
+                <h3 class="text5">Prepare metadata</h3>
+                <p class="card-text">
+                  Upload media and metadata files
+                </p>
+                <h6 class="get-started">Get Started</h6>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="card_1 p-3 ">
+
+
+
+                <h3 class="text5">Deploy</h3>
+                <p class="card-text">
+                  Choose network, select settings and deploy
+                </p>
+                <h6 class="get-started">Get Started</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!--section8-->
+      <section class="container-fluid" style="background-color: rgba(245, 245, 245, 0.151); margin-top: 5%;">
+        <div class="container">
+          <div class="row ">
+            <div class="col 12">
+              <h1 class="text3">Stay in the loop</h1>
+              <p class="text4"
+                style="color: #fff; font-size: 20px; font-family: 'Times New Roman', Times, serif; font-weight: bold;">
+                Join our mailing list to stay in the loop with our newest feature releases,NFT drops, and tips andtricks
+                for navigating NFT.</p>
+            </div>
+          </div>
+
+
+          <div class="mail_form_container">
+            <form action="#" class="input">
+              <input type="email" class="mail_input mb-5 " required="required" placeholder="Your e-mail address"><button
+                type="submit" class="mail_button">Join now</button>
+            </form>
+          </div>
+
+
+
+          <!--section9-->
+          <section>
+            <div class="container">
+              <div class="row ">
+                <div class="col 12">
+                  <h1 class="text3">Need help?</h1>
+                </div>
+              </div>
+            </div>
+            <!-- <button class="btn_7">Contact support</button> -->
+          </section>
+
+          <!--section10-->
+          <section>
+            <div class="container" style="height: 50px; text-align: center;background-color:  rgba(127, 115, 115, 0.291);color: #fff; padding: 15px;">
+              <p>Need Help? Visit our <span style="text-decoration: underline;">Help Section</span></p>
+            </div>
+          </section>
+
+          <!--section11-->
+          <section>
+            <div class="container-fluid" style="margin-top: 8%;color: #fff;">
+              <p>More ways to reach us: <span style="text-decoration: underline;">contact Us
+                      +44(0)2031515550</span>(24/5).</p>
+              <p> FxPro UK Ltd:13/14 Basinghall Street, City of London, <span style="text-decoration: underline;">EC2Y
+                      5BO,</span>UK</p>
+          </div>
+          </section>
+
+          <!--section12-->
+          <section>
+            
+            <div class="row" style="margin-top: 5%;">
+              <div class="col-3">
+                  <div><b style="color:#fff;">Trading</b></div>
+                  <div class="card_9" style="border-left: none;border-right: none; border-top: none; border-radius: 2px;background-color: #600aca;">
+                      <p style="font-size: 60%;color:rgba(255, 255, 255, 0.695); margin-top: 5%;">TRADE WITH FXPRO</p>
+                  </div>
+                  <p style="color: #fff;">Pro Conditions</p>
+                  <p style="color: #fff;">Open trading account</p>
+                  <p style="color: #fff;">Pricing model</p>
+                  <p style="color: #fff;">Funding & Withdrawals</p>
+                  <p style="color: #fff;">PAMM Accounts</p>
+  
+                  <div class="card_9" style="border-left: none;border-right: none; border-top: none; border-radius: 2px;background-color: #600aca;">
+                      <p style="font-size: 60%;color:rgba(255, 255, 255, 0.695); margin-top: 5%;">NFT PLATFORM</p>
+                  </div>
+                  <p style="color: #fff;">NFT Mobile App</p>
+                  <p style="color: #fff;">NFT Traders</p>
+                  <p style="color: #fff;">NFT Web Trader</p>
+                  <p style="color: #fff;">Platform and account comparison</p>
+  
+  
+                  <div class="card_9" style="border-left: none;border-right: none; border-top: none; border-radius: 2px;background-color: #600aca;">
+                      <p style="font-size: 60%;color:rgba(255, 255, 255, 0.695); margin-top: 5%;">SECURITY</p>
+                  </div>
+                  <p style="color: #fff;">NFT Online Security</p>
+                  <p style="color: #fff;">Responsible Platform</p>
+              </div>
+              <div class="col-3">
+                  <div><b style="color:#fff;">Markets & Tools</b></div>
+                  <div class="card_9" style="border-left: none;border-right: none; border-top: none; border-radius: 2px;background-color: #600aca;">
+                      <p style="font-size: 60%;color:rgba(255, 255, 255, 0.695); margin-top: 5%;">MARKET INSTRUMENT</p>
+                  </div>
+                  <p style="color: #fff;">Forex</p>
+                  <p style="color: #fff;">Shares</p>
+                  <p style="color: #fff;">Energy</p>
+                  <p style="color: #fff;">Indices</p>
+                  <p style="color: #fff;">Futures</p>
+                  <p style="color: #fff;">Metals</p>
+  
+                  <div class="card_9" style="border-left: none;border-right: none; border-top: none; border-radius: 2px; background-color: #600aca;">
+                      <p style="font-size: 60%;color:rgba(255, 255, 255, 0.695); margin-top: 5%;">TRADING TOOLS</p>
+                  </div>
+                  <p style="color: #fff;">All in-one FX calculators</p>
+                  <p style="color: #fff;">Tech analysis</p>
+                  <p style="color: #fff;">NFT VPS</p>
+  
+                  <div class="card_9" style="border-left: none;border-right: none; border-top: none; border-radius: 2px;background-color: #600aca;">
+                      <p style="font-size: 60%;color:rgba(255, 255, 255, 0.695); margin-top: 5%;">MARKET NEWS FEED</p>
+                  </div>
+                  <p style="color: #fff;">Market news</p>
+                  <p style="color: #fff;">Economic calender</p>
+                  <p style="color: #fff;">Earnings calender</p>
+                  <p style="color: #fff;">Market Holidays</p>
+              </div>
+              
+  
+  
+              <div class="col-3">
+                  <div><b style="color:#fff;">Knowledge Hub</b></div>
+                  <div class="card_9" style="border-left: none;border-right: none; border-top: none; border-radius: 2px;background-color: #600aca;">
+                      <p style="font-size: 60%;color:rgba(255, 255, 255, 0.695); margin-top: 5%;">EDUCATINAL MATERIALS</p>
+                  </div>
+                  <p style="color: #fff;">Basics of Trading</p>
+                  <p style="color: #fff;">Fundamental analysis</p>
+                  <p style="color: #fff;">Technical analysis</p>
+                  <p style="color: #fff;">Traders Glossary</p>
+                  <p style="color: #fff;">Traders Psychology</p>
+                  <p style="color: #fff;">CME Group Education</p>
+                  <p style="color: #fff;">Articles</p>
+      
+                  <div class="card_9" style="border-left: none;border-right: none; border-top: none; border-radius: 2px;background-color: #600aca;">
+                      <p style="font-size: 60%;color:rgba(255, 255, 255, 0.695); margin-top: 5%;">TRADING PLATFORM</p>
+                  </div>
+                  <p style="color: #fff;">FxPro Webinars</p>
+                  <p style="color: #fff;">Watch and Learn</p>
+      
+              </div>
+  
+  
+  
+              <div class="col-3">
+                  <div><b style="color:#fff;">Company Documents</b></div>
+                  <div class="card_9" style="border-left: none;border-right: none; border-top: none; border-radius: 5px; background-color: #600aca;">
+                      <p style="font-size: 60%;color:rgba(255, 255, 255, 0.695); margin-top: 5%;">VIDEOS & WEBINARS</p>
+                  </div>
+                  <p style="color: #fff;">Site T&Cs</p>
+                  <p style="color: #fff;">Legal Docs</p>
+                  <p style="color: #fff;">Coporate Actions</p>
+                  <p style="color: #fff;">Key Information Documents</p>
+                  <p style="color: #fff;">Complaints handling procedure</p>
+                  <p style="color: #fff;">Privacy Policy</p>
+                  <p style="color: #fff;">Risk Disclosure Notice</p>
+                  <p style="color: #fff;">Email Disclaimer</p>
+                  <p style="color: #fff;">Cookies</p>
+                  <p style="color: #fff;">Tied Agents</p>
+                  <p style="color: #fff;">Terms and Conditions</p>
+              </div>
+          </div>
+          </section>
+      </section>
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous">
+    </script>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
